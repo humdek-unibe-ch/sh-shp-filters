@@ -113,7 +113,11 @@ class FilterToggleGroupView extends FilterView
     {
         if (empty($local)) {
             if (DEBUG) {
-                $local = array(__DIR__ . "/../filter/js/filter.js", __DIR__ . "/js/filterToggleGroup.js");
+                $local = array(
+                    __DIR__ . "/../filter/js/filter.js", 
+                    __DIR__ . "/../filterToggle/js/filterToggle.js", 
+                __DIR__ . "/js/filterToggleGroup.js",
+            );
             } else {
                 $local = array(__DIR__ . "/../../../../js/ext/filters.min.js?v=" . rtrim(shell_exec("git describe --tags")));
             }
